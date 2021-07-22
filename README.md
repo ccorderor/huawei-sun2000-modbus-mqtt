@@ -3,7 +3,7 @@ Monitoring the Huawei SUN2000L KTL L1 inverter via Modbus TCP and publishing the
 
 **What is this?**
 
-This script allows to control a Huawei SUN2000L KTL L1 inverter via Modbus TCP and to publish the values in MQTT (for use in node-network, Home Assistant...).
+This script allows to control a Huawei SUN2000L KTL L1 inverter via Modbus TCP and to publish the values in MQTT (for use in node-red, Home Assistant, OpenHab...).
 
 I created this script because the examples I found on the internet did not work with the dongle (SDongle A52) with LAN connection and not via WiFi. It seems that the SUN2000L is quite peculiar with its Modbus TCP protocol...
 
