@@ -12,6 +12,7 @@ I use the HuaweiSolar library (https://gitlab.com/Emilv2/huawei-solar) from Emil
 Finally, there is also the possibility to build a docker image and launch it in any environment.
 
 A lot of information, code and knowledge extracted from:
-https://domotuto.com/conexion-del-inversor-fotovoltaico-huawei-sun2000-a-broker-mqtt-node-red/
-https://www.dropbox.com/s/9zaa1zexnr6cv60/detalles_modbus-tcp.py?dl=0
-https://community.home-assistant.io/t/integration-solar-inverter-huawei-2000l/132350/1
+
+- https://domotuto.com/conexion-del-inversor-fotovoltaico-huawei-sun2000-a-broker-mqtt-node-red/
+- https://www.dropbox.com/s/9zaa1zexnr6cv60/detalles_modbus-tcp.py?dl=0
+- https://community.home-assistant.io/t/integration-solar-inverter-huawei-2000l/132350/1
