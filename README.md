@@ -1,7 +1,7 @@
-# huawei-sun2000-modbus-mqtt
+# Huawei SUN2000 KTL L1 Inverter Modbus TCP to MQTT
 Monitoring the Huawei SUN2000L KTL L1 inverter via Modbus TCP and publishing the values to MQTT
 
-**What is this**
+**What is this?**
 
 This script allows to control a Huawei SUN2000L KTL L1 inverter via Modbus TCP and to publish the values in MQTT (for use in node-network, Home Assistant...).
 
