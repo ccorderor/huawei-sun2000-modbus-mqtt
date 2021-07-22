@@ -1,0 +1,2 @@
+huawei_solar
+paho.mqtt
