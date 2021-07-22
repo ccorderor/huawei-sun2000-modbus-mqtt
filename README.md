@@ -16,3 +16,13 @@ A lot of information, code and knowledge extracted from:
 - https://domotuto.com/conexion-del-inversor-fotovoltaico-huawei-sun2000-a-broker-mqtt-node-red/
 - https://www.dropbox.com/s/9zaa1zexnr6cv60/detalles_modbus-tcp.py?dl=0
 - https://community.home-assistant.io/t/integration-solar-inverter-huawei-2000l/132350/1
+
+
+*Docker container*
+
+![docker](https://raw.githubusercontent.com/ccorderor/huawei-sun2000-modbus-mqtt/main/images/huawei_docker.png)
+
+
+*Node-red mqtt listeners*
+
+![node-red](https://raw.githubusercontent.com/ccorderor/huawei-sun2000-modbus-mqtt/main/images/huawei_nodered.png)
