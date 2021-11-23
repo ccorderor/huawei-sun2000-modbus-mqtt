@@ -24,16 +24,20 @@ You should download it in the same computer you are going to run the container.
 
 Then, you need to generate the docker image. Enter inside the code folder, and execute the following command:
 
+```
 docker build -t huawei-solar .
+```
 
 Once the docker image has been generated, you can use the following docker-compose service to initialize it:
 
+```
  huawei-solar:
     container_name: huawei-solar
     restart: unless-stopped
     image: huawei-solar:latest
     environment:
       - INVERTER_IP=XXX.XXX.XXX.XXX
+```
 
 *Docker container*
 
