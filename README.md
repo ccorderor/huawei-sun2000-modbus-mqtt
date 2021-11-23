@@ -17,6 +17,23 @@ A lot of information, code and knowledge extracted from:
 - https://www.dropbox.com/s/9zaa1zexnr6cv60/detalles_modbus-tcp.py?dl=0
 - https://community.home-assistant.io/t/integration-solar-inverter-huawei-2000l/132350/1
 
+*Howto generate docker container*
+
+First, download the code from this repo (you can either clone the repo or download the gzip file and extract it).
+You should download it in the same computer you are going to run the container.
+
+Then, you need to generate the docker image. Enter inside the code folder, and execute the following command:
+
+docker build -t huawei-solar .
+
+Once the docker image has been generated, you can use the following docker-compose service to initialize it:
+
+ huawei-solar:
+    container_name: huawei-solar
+    restart: unless-stopped
+    image: huawei-solar:latest
+    environment:
+      - INVERTER_IP=XXX.XXX.XXX.XXX
 
 *Docker container*
 
