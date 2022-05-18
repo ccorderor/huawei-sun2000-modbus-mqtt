@@ -1,2 +1,2 @@
-huawei_solar
+huawei-solar == 1.2.0
 paho.mqtt
