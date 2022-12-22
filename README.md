@@ -22,6 +22,9 @@ A lot of information, code and knowledge extracted from:
 First, download the code from this repo (you can either clone the repo or download the gzip file and extract it).
 You should download it in the same computer you are going to run the container.
 
+Modify the `huaweisolar.py` script and add any additional parameters you wish to log into the `vars` and `vars_inmediate` variables,
+see the library source for the possible values of the sources, see: https://gitlab.com/Emilv2/huawei-solar/-/blob/master/src/huawei_solar/register_names.py
+
 Then, you need to generate the docker image. Enter inside the code folder, and execute the following command:
 
 ```
@@ -37,7 +40,16 @@ Once the docker image has been generated, you can use the following docker-compo
     image: huawei-solar:latest
     environment:
       - INVERTER_IP=XXX.XXX.XXX.XXX
+      - MQTT_HOST=XXX.XXX.XXX.XXX
 ```
+
+Save as: `docker-compose.yml`
+Run:
+
+```
+docker compose up -d
+```
+
 
 *Docker container*
 
