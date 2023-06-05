@@ -40,6 +40,18 @@ def modbusAccess():
     vars = ['day_active_power_peak', 'efficiency', 'internal_temperature', 'insulation_resistance', 'device_status', 'fault_code', 'accumulated_yield_energy',
     'daily_yield_energy', 'grid_exported_energy', 'grid_accumulated_energy']
 
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/pv_01_voltage/config", payload= '{"uniq_id": "pv_01_voltage", "name": "Huawei 01 Voltage", "dev_cla": "power", "stat_t": "emon/NodeHuawei/pv_01_voltage", "unit_of_meas": "' + huawei_solar.REGISTERS["pv_01_voltage"].unit + '"}', qos=1, retain=False)
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/pv_02_voltage/config", payload= '{"uniq_id": "pv_02_voltage", "name": "Huawei 02 Voltage", "dev_cla": "power", "stat_t": "emon/NodeHuawei/pv_02_voltage", "unit_of_meas": "' + huawei_solar.REGISTERS["pv_01_voltage"].unit + '"}', qos=1, retain=False)
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/pv_01_current/config", payload= '{"uniq_id": "pv_01_current", "name": "Huawei 01 Current", "dev_cla": "current", "stat_t": "emon/NodeHuawei/pv_01_current", "unit_of_meas": "' + huawei_solar.REGISTERS["pv_01_voltage"].unit + '"}', qos=1, retain=False)
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/pv_02_current/config", payload= '{"uniq_id": "pv_02_current", "name": "Huawei 02 Current", "dev_cla": "current", "stat_t": "emon/NodeHuawei/pv_02_current", "unit_of_meas": "' + huawei_solar.REGISTERS["pv_01_voltage"].unit + '"}', qos=1, retain=False)
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/input_power/config", payload= '{"uniq_id": "input_power", "name": "Huawei Input power", "dev_cla": "power", "stat_t": "emon/NodeHuawei/input_power", "unit_of_meas": "' + huawei_solar.REGISTERS["pv_01_voltage"].unit + '"}', qos=1, retain=False)
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/grid_voltage/config", payload= '{"uniq_id": "grid_voltage", "name": "Huawei Grid Voltage", "dev_cla": "power", "stat_t": "emon/NodeHuawei/grid_voltage", "unit_of_meas": "' + huawei_solar.REGISTERS["pv_01_voltage"].unit + '"}', qos=1, retain=False)
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/grid_current/config", payload= '{"uniq_id": "grid_current", "name": "Huawei Grid Current", "dev_cla": "current", "stat_t": "emon/NodeHuawei/grid_current", "unit_of_meas": "' + huawei_solar.REGISTERS["pv_01_voltage"].unit + '"}', qos=1, retain=False)
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/accumulated_yield_energy/config", payload= '{"uniq_id": "accumulated_yield_energy", "name": "Huawei Total Yield", "dev_cla": "energy", "stat_t": "emon/NodeHuawei/accumulated_yield_energy", "unit_of_meas": "' + huawei_solar.REGISTERS["pv_01_voltage"].unit + '"}', qos=1, retain=False)
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/daily_yield_energy/config", payload= '{"uniq_id": "daily_yield_energy", "name": "Huawei Daily Yield", "dev_cla": "energy", "stat_t": "emon/NodeHuawei/daily_yield_energy", "unit_of_meas": "' + huawei_solar.REGISTERS["pv_01_voltage"].unit + '"}', qos=1, retain=False)
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/device_status/config", payload= '{"uniq_id": "device_status", "name": "Huawei device status", "stat_t": "emon/NodeHuawei/device_status"}', qos=1, retain=False)
+    clientMQTT.publish(topic="homeassistant/sensor/HuaweiInverter/fault_code/config", payload= '{"uniq_id": "fault_code", "name": "Huawei fault code", "stat_t": "emon/NodeHuawei/fault_code"}', qos=1, retain=False)
+
     cont = 0
     while True:
 
