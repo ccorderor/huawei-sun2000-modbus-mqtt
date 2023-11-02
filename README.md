@@ -41,6 +41,8 @@ Once the docker image has been generated, you can use the following docker-compo
     environment:
       - INVERTER_IP=XXX.XXX.XXX.XXX
       - MQTT_HOST=XXX.XXX.XXX.XXX
+      - MQTT_USER=${MQTT_USER}
+      - MQTT_PASS=${MQTT_PASS}
 ```
 
 Save as: `docker-compose.yml`
