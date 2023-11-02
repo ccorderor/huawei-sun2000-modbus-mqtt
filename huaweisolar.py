@@ -13,6 +13,8 @@ log.setLevel(logging.INFO)
 
 inverter_ip = os.getenv('INVERTER_IP', '192.168.1.14')
 mqtt_host = os.getenv('MQTT_HOST', '192.168.1.15')
+mqtt_user = os.getenv('MQTT_USER', '')
+mqtt_pass = os.getenv('MQTT_PASS', '')
 
 inverter = huawei_solar.HuaweiSolar(inverter_ip, port=502, slave=1)
 inverter._slave = 1
@@ -102,7 +104,7 @@ clientMQTT = paho.mqtt.client.Client()
 clientMQTT.on_connect=on_connect #bind call back function
 clientMQTT.loop_start()
 log.info("Connecting to MQTT broker: %s ",mqtt_host)
-clientMQTT.username_pw_set(username="",password="")
+clientMQTT.username_pw_set(username=mqtt_user,password=mqtt_pass)
 clientMQTT.connect(mqtt_host, broker_port) #connect to broker
 while not clientMQTT.connected_flag: #wait in loop
     log.info("...")
